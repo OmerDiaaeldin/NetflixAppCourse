@@ -6,14 +6,11 @@ package aui.netflixapp.subscriptionPlan;
 
 /**
  *
- * @author odaio
+ * @author KDP only
  */
-
-import aui.netflixapp.subscriptionPlan.Quality;
-
-public class Plan {
-    private double cost;
-    int screen_num;
-    int downloaded_devices;
-    Quality quality;
+public enum Quality {
+    SD,
+    HD,
+    FHD,
+    FourK,
 }
