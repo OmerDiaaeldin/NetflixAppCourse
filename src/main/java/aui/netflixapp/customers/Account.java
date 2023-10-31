@@ -37,7 +37,12 @@ public class Account {
     }
     
     public void authenticate(String email, String password){
-        
+        if(getEmail().equals(email) && getPassword().equals(password)) {
+            System.out.println("Access Granted!");
+        }
+        else {
+            System.out.println("Access Denied!");
+        }
     }
     
     public void changePassword(String password){
