@@ -9,5 +9,24 @@ package aui.netflixapp.shows;
  * @author odaio
  */
 public class MaturityRating {
+    private String[] rating_reason;
+
+    public MaturityRating(String[] rating_reason) {
+        this.rating_reason = rating_reason;
+    }
+
+    public String[] getRating_reason() {
+        return rating_reason;
+    }
+
+    public void setRating_reason(String[] rating_reason) {
+        this.rating_reason = rating_reason;
+    }
+
+    @Override
+    public String toString() {
+        return "MaturityRating{" + "rating_reason=" + rating_reason + '}';
+    }
+    
     
 }
