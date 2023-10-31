@@ -21,5 +21,35 @@ public class Request {
         this.date = date;
         this.titleSuggestion = titleSuggestion;
     }
+
+    public Account getAccount1() {
+        return account1;
+    }
+
+    public void setAccount1(Account account1) {
+        this.account1 = account1;
+    }
+
+    public GregorianCalendar getDate() {
+        return date;
+    }
+
+    public void setDate(GregorianCalendar date) {
+        this.date = date;
+    }
+
+    public String getTitleSuggestion() {
+        return titleSuggestion;
+    }
+
+    public void setTitleSuggestion(String titleSuggestion) {
+        this.titleSuggestion = titleSuggestion;
+    }
+
+    @Override
+    public String toString() {
+        return "Request{" + "account1=" + account1 + ", date=" + date + ", titleSuggestion=" + titleSuggestion + '}';
+    }
+    
     
 }

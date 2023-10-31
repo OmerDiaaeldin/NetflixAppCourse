@@ -9,5 +9,5 @@ package aui.netflixapp.shows;
  * @author odaio
  */
 public class Show {
-    
+    private String title;
 }

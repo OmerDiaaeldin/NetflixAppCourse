@@ -56,21 +56,23 @@ public class Subscription {
     public void setCancel_reason(String cancel_reason) {
         this.cancel_reason = cancel_reason;
     }
-
+            
+    public void change_plan(Plan new_plan) {
+        setCurrent_plan(new_plan);
+    }
+    
+    public void billing_by_monthly() {
+        
+    }
+    
+    public void cancel(String cancel_reason, GregorianCalendar date) {
+        setCancel_reason(cancel_reason);
+        setCanceled(date);
+    }
+    
+    
     @Override
     public String toString() {
         return "Subscription{" + "subscribed=" + subscribed + ", current_plan=" + current_plan + ", canceled=" + canceled + ", cancel_reason=" + cancel_reason + '}';
     }
-            
-    
-    public void change_plan(Plan new_plan) {
-        setCurrent_plan(new_plan);
-    }
-    public void billing_by_monthly() {
-        
-    }
-    public void cancel(String cancel_reason, GregorianCalendar date) {
-        setCancel_reason(cancel_reason);
-        setCanceled(date);
-    };
 }
