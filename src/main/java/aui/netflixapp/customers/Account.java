@@ -36,23 +36,28 @@ public class Account {
         this.password = password;
     }
     
-    public void authenticate(String email, String password){
-        if(getEmail().equals(email) && getPassword().equals(password)) {
+    public boolean authenticate(String email, String password){
+        if( (this.email).equals(email) && (this.password).equals(password)) {
             System.out.println("Access Granted!");
+            return true;
         }
         else {
             System.out.println("Access Denied!");
+            return false;
         }
     }
     
     public void changePassword(String password){
         setPassword(password);
-
     }
     
     public void resetPassword(String password){
         setPassword(password);
     }
     
+    @Override 
+    public String toString(){
+        return "Your account Email is "+email+" has password "+password;
+    }
     
 }
