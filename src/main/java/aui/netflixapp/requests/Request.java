@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package aui.netflix.requests;
+package aui.netflixapp.requests;
 
 import aui.netflixapp.customers.Account;
 import java.util.GregorianCalendar;
