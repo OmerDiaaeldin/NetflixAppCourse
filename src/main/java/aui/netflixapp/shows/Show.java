@@ -8,6 +8,128 @@ package aui.netflixapp.shows;
  *
  * @author odaio
  */
+
+import java.util.GregorianCalendar;
+import aui.netflixapp.subscriptionPlan.Quality;
+
 public class Show {
     private String title;
+    private GregorianCalendar release_date;
+    private Quality quality;
+    private Genres[] genres;
+    private Languages language;
+    private String[] names;
+    private int num_views;
+    private String synopsis;
+    private double average_rating;
+    private MaturityLevel level;
+    private int total_watch;
+
+    public Show(String title, GregorianCalendar release_date, Quality quality, Genres[] genres, Languages language, String[] names, int num_views, String synopsis, double average_rating, MaturityLevel level, int total_watch) {
+        this.title = title;
+        this.release_date = release_date;
+        this.quality = quality;
+        this.genres = genres;
+        this.language = language;
+        this.names = names;
+        this.num_views = num_views;
+        this.synopsis = synopsis;
+        this.average_rating = average_rating;
+        this.level = level;
+        this.total_watch = total_watch;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public GregorianCalendar getRelease_date() {
+        return release_date;
+    }
+
+    public void setRelease_date(GregorianCalendar release_date) {
+        this.release_date = release_date;
+    }
+
+    public Quality getQuality() {
+        return quality;
+    }
+
+    public void setQuality(Quality quality) {
+        this.quality = quality;
+    }
+
+    public Genres[] getGenres() {
+        return genres;
+    }
+
+    public void setGenres(Genres[] genres) {
+        this.genres = genres;
+    }
+
+    public Languages getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(Languages language) {
+        this.language = language;
+    }
+
+    public String[] getNames() {
+        return names;
+    }
+
+    public void setNames(String[] names) {
+        this.names = names;
+    }
+
+    public int getNum_views() {
+        return num_views;
+    }
+
+    public void setNum_views(int num_views) {
+        this.num_views = num_views;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
+    }
+
+    public double getAverage_rating() {
+        return average_rating;
+    }
+
+    public void setAverage_rating(double average_rating) {
+        this.average_rating = average_rating;
+    }
+
+    public MaturityLevel getLevel() {
+        return level;
+    }
+
+    public void setLevel(MaturityLevel level) {
+        this.level = level;
+    }
+
+    public int getTotal_watch() {
+        return total_watch;
+    }
+
+    public void setTotal_watch(int total_watch) {
+        this.total_watch = total_watch;
+    }
+
+    @Override
+    public String toString() {
+        return "Show{" + "title=" + title + ", release_date=" + release_date + ", quality=" + quality + ", genres=" + genres + ", language=" + language + ", names=" + names + ", num_views=" + num_views + ", synopsis=" + synopsis + ", average_rating=" + average_rating + ", level=" + level + ", total_watch=" + total_watch + '}';
+    }
+    
 }
