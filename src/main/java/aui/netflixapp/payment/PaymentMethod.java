@@ -4,10 +4,61 @@
  */
 package aui.netflixapp.payment;
 
+import java.util.GregorianCalendar;
+
 /**
  *
  * @author odaio
  */
 public class PaymentMethod {
+    private String holder_name;
+    private GregorianCalendar expiration;
+    private PaymentType type;
+    private int number;
+
+    public PaymentMethod(String holder_name, GregorianCalendar expiration, PaymentType type, int number) {
+        this.holder_name = holder_name;
+        this.expiration = expiration;
+        this.type = type;
+        this.number = number;
+    }
+
+    public String getHolder_name() {
+        return holder_name;
+    }
+
+    public void setHolder_name(String holder_name) {
+        this.holder_name = holder_name;
+    }
+
+    public GregorianCalendar getExpiration() {
+        return expiration;
+    }
+
+    public void setExpiration(GregorianCalendar expiration) {
+        this.expiration = expiration;
+    }
+
+    public PaymentType getType() {
+        return type;
+    }
+
+    public void setType(PaymentType type) {
+        this.type = type;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "PaymentMethod{" + "holder_name=" + holder_name + ", expiration=" + expiration + ", type=" + type + ", number=" + number + '}';
+    }
+    
     
 }
