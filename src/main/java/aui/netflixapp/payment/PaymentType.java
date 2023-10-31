@@ -8,6 +8,7 @@ package aui.netflixapp.payment;
  *
  * @author odaio
  */
-public class PaymentType {
-    
+public enum PaymentType {
+    VisaCard,
+    MasterCard;
 }
