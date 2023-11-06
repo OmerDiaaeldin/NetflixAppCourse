@@ -59,6 +59,9 @@ public class Netflix {
     public void setRequests(Request[] requests) {
         this.requests = requests;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Netflix{" + "shows=" + shows + ", customers=" + customers + ", requests=" + requests + '}';
+    }
 }
