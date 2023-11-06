@@ -4,10 +4,51 @@
  */
 package aui.netflixapp.shows;
 
+import java.util.GregorianCalendar;
+
 /**
  *
  * @author odaio
  */
 public class Viewing {
-    
+
+    private GregorianCalendar date;
+    private Show show;
+    private int rating;
+
+    public Viewing(GregorianCalendar date, Show show, int rating) {
+        this.date = date;
+        this.show = show;
+        this.rating = rating;
+    }
+
+    public GregorianCalendar getDate() {
+        return date;
+    }
+
+    public void setDate(GregorianCalendar date) {
+        this.date = date;
+    }
+
+    public Show getShow() {
+        return show;
+    }
+
+    public void setShow(Show show) {
+        this.show = show;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "Viewing{" + "date=" + date + ", show=" + show + ", rating=" + rating + '}';
+    }
+
 }
