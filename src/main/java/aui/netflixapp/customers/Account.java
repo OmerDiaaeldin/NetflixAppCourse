@@ -37,7 +37,7 @@ public class Account {
     }
     
     public boolean authenticate(String email, String password){
-        if( (this.email).equals(email) && (this.password).equals(password)) {
+        if( (this.email).equals(email) && (this.password).equals(password) ) {
             System.out.println("Access Granted!");
             return true;
         }
