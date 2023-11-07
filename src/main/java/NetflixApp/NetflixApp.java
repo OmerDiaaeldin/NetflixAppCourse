@@ -5,21 +5,21 @@
 package NetflixApp;
 
 
-import java.util.GregorianCalendar;
-import java.util.Scanner;
 import aui.netflixapp.netflix.Netflix;
-import java.util.ArrayList;
-import aui.netflixapp.customers.Account;
 import aui.netflixapp.shows.*;
-import aui.netflixapp.subscriptionPlan.*;
+import aui.netflixapp.subscriptionPlan.Quality;
+import aui.netflixapp.customers.Account;
 import aui.netflixapp.requests.Request;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.GregorianCalendar;
+
 public class NetflixApp {
-    
+
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
-        
-        
+
         ArrayList<Show> shows = new ArrayList<>();
         ArrayList<Account> customers = new ArrayList<>();
         ArrayList<Request> requests = new ArrayList<>();
@@ -35,17 +35,19 @@ public class NetflixApp {
             new String[]{"Bryan Cranston", "Aaron Paul"},
             0,
             "High school chemistry teacher turned methamphetamine kingpin.",
-            9.5, // Average rating
+            9.5,
             new MaturityLevel(18, "Morally ambiguous show has crime, drugs, Latino stereotypes."),
             0
         );
 
         netflix.addShow(breakingBad);
         
-        
+        System.out.println("State of 'Breaking Bad' show:");
+        System.out.println(breakingBad.toString());
+
         System.out.println("You must have an account in order to access NetflixApp. Press 1 to sign up:");
         int choice = myObj.nextInt();
-        
+
         if (choice == 1) {
             myObj.nextLine();
 
@@ -55,6 +57,8 @@ public class NetflixApp {
             String password = myObj.nextLine();
 
             netflix.register(email, password);
+            System.out.println("State of the user account:");
+            System.out.println(customers.get(0).toString()); // Assuming only one user account for simplicity
 
             System.out.println("Enter the name of the show:");
             String searchQuery = myObj.nextLine();
@@ -62,7 +66,6 @@ public class NetflixApp {
 
             System.out.println("Browsing Netflix shows:");
             netflix.browse();
-
         } else {
             System.out.println("You must sign up to access NetflixApp. Goodbye!");
         }
