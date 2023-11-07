@@ -8,7 +8,7 @@ package aui.netflixapp.shows;
  *
  * @author odaio
  */
-
+import java.util.Arrays;
 import java.util.GregorianCalendar;
 import aui.netflixapp.subscriptionPlan.Quality;
 
@@ -129,7 +129,24 @@ public class Show {
 
     @Override
     public String toString() {
-        return "Show{" + "title=" + title + ", release_date=" + release_date + ", quality=" + quality + ", genres=" + genres + ", language=" + language + ", names=" + names + ", num_views=" + num_views + ", synopsis=" + synopsis + ", average_rating=" + average_rating + ", level=" + level + ", total_watch=" + total_watch + '}';
+        GregorianCalendar releaseDate = getRelease_date();
+        int year = releaseDate.get(GregorianCalendar.YEAR);
+        int month = releaseDate.get(GregorianCalendar.MONTH) + 1; // Months are zero-based, so add 1
+        int day = releaseDate.get(GregorianCalendar.DAY_OF_MONTH);
+
+        return "Show{" +
+            "title='" + title + '\'' +
+            ", release_date=" + year + "-" + month + "-" + day +
+            ", quality=" + quality +
+            ", genres=" + Arrays.toString(genres) +
+            ", language=" + language +
+            ", names=" + Arrays.toString(names) +
+            ", num_views=" + num_views +
+            ", synopsis='" + synopsis + '\'' +
+            ", average_rating=" + average_rating +
+            ", level=" + level +
+            ", total_watch=" + total_watch +
+            '}';
     }
     
 }
