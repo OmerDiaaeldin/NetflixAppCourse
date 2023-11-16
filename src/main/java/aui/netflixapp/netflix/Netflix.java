@@ -50,8 +50,6 @@ public class Netflix {
     }
 
     public void browse() {
-
-        System.out.println("Browsing Netflix shows");
         
         if (shows.isEmpty()) {
             System.out.println("No shows found.");
@@ -61,7 +59,7 @@ public class Netflix {
                 System.out.println(show.getTitle());
             }
         }
-        // Display a list of available shows for browsing
+        
     }
 
     public void addShow(Show show) {
