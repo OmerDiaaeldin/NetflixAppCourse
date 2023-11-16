@@ -50,8 +50,17 @@ public class Netflix {
     }
 
     public void browse() {
-        // Implement the browsing functionality here
+
         System.out.println("Browsing Netflix shows");
+        
+        if (shows.isEmpty()) {
+            System.out.println("No shows found.");
+        } else {
+            System.out.println("Currently available shows on Netflix:");
+            for (Show show : shows) {
+                System.out.println(show.getTitle());
+            }
+        }
         // Display a list of available shows for browsing
     }
 
