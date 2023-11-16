@@ -10,7 +10,6 @@ package aui.netflixapp.subscriptionPlan;
  */
 
 import java.util.GregorianCalendar;
-import aui.netflixapp.subscriptionPlan.Plan;
 
 public class Subscription {
     private GregorianCalendar subscribed;    

@@ -9,8 +9,6 @@ package aui.netflixapp.subscriptionPlan;
  * @author odaio
  */
 
-import aui.netflixapp.subscriptionPlan.Quality;
-
 public class Plan {
     private double cost;
     private int screen_num;
