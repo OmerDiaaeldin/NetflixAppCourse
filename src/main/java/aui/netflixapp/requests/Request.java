@@ -10,7 +10,7 @@ import java.util.GregorianCalendar;
  *
  * @author odaio
  */
-public class Request {
+public class Request implements Comparable<Request> {
 
     protected Account account1;
     protected GregorianCalendar date;
@@ -44,6 +44,23 @@ public class Request {
 
     public void setTitleSuggestion(String titleSuggestion) {
         this.titleSuggestion = titleSuggestion;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        return (obj != null
+                && obj instanceof Request
+                && ((Request) obj).getTitleSuggestion().equals(this.getTitleSuggestion()));
+    }
+
+    @Override
+    public int hashCode() {
+        return titleSuggestion.hashCode();
+    }
+    
+    @Override
+    public int compareTo(Request request) {
+        return (this.titleSuggestion.compareTo(request.getTitleSuggestion()));
     }
 
     @Override

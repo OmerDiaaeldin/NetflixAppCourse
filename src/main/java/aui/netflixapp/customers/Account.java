@@ -8,7 +8,7 @@ package aui.netflixapp.customers;
  *
  * @author odaio
  */
-public class Account {
+public class Account implements Comparable<Account> {
     //implement methods
     //verify whether getters and setters should be used
     
@@ -53,6 +53,23 @@ public class Account {
     
     public void resetPassword(String password){
         setPassword(password);
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        return (obj != null
+                && obj instanceof Account
+                && ((Account) obj).getEmail().equals(this.getEmail()));
+    }
+
+    @Override
+    public int hashCode() {
+        return email.hashCode();
+    }
+    
+    @Override
+    public int compareTo(Account account) {
+        return (this.email.compareTo(account.email));
     }
     
     @Override 

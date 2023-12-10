@@ -85,7 +85,7 @@ public class Netflix {
         }
     }
 
-    public ArrayList<Show> search(double rating) {
+    public ArrayList<Show> searchShow(double rating) {
         ListIterator<Show> iter = shows.listIterator();
         ArrayList<Show> results = new ArrayList<>();
 
@@ -128,7 +128,6 @@ public class Netflix {
     }
     
     
-    ////////////////////////////////////////////////////////
     public void addAccount(Account account) {
     // Add a new account to the list of customers
     customers.add(account);
@@ -148,21 +147,20 @@ public class Netflix {
             }
         }
 }
-
-    public ArrayList<Account> search(String email) {
+    public ArrayList<Account> searchAccount(String email) {
         ListIterator<Account> iter = customers.listIterator();
         ArrayList<Account> results = new ArrayList<>();
 
         while (iter.hasNext()) {
             Account account = iter.next();
-            if (account.getEmail().eqbalance) {
+            if (account.getEmail().equals(email)) {
                 results.add(account);
             }
         }
         return results;
 }
 
-public void sortcustomers() {
+public void sortshows() {
     Collections.sort(customers);
 }
 
@@ -190,7 +188,68 @@ public void findAccount(Account account, Comparator<Account> comp) {
     }
 }
 
-    ///////////////////////////////////////
+    // requests methods
+    public void addRequest(Request request) {
+        // Add a new request to the list of requests
+        requests.add(request);
+        System.out.println("Added a new request.");
+    }
+
+    public void removeRequest(Request request) {
+        requests.remove(request);
+    }
+
+    public void editRequest(String titleSuggestion, Request newRequest) {
+        ListIterator<Request> iter = requests.listIterator();
+        while (iter.hasNext()) {
+            Request request = iter.next();
+            if (request.getTitleSuggestion().equals(titleSuggestion)) {
+                iter.set(newRequest);
+            }
+        }
+    }
+
+    public ArrayList<Request> searchRequest(String titleSuggestion) {
+        ListIterator<Request> iter = requests.listIterator();
+        ArrayList<Request> results = new ArrayList<>();
+
+        while (iter.hasNext()) {
+            Request request = iter.next();
+            if (request.getTitleSuggestion().equals(titleSuggestion)) {
+                results.add(request);
+            }
+        }
+        return results;
+    }
+
+    public void sortRequests() {
+        Collections.sort(requests);
+    }
+
+    public void sortRequestsDescending() {
+        Collections.sort(requests, Collections.reverseOrder());
+    }
+
+    public void sortRequests(Comparator<Request> comp) {
+        Collections.sort(requests, comp);
+    }
+
+    public boolean findRequest(Request request) {
+        Collections.sort(requests);
+        int index = Collections.binarySearch(requests, request);
+        return index >= 0;
+    }
+
+    public void findRequest(Request request, Comparator<Request> comp) {
+        Collections.sort(requests, comp);
+        int index = Collections.binarySearch(requests, request, comp);
+        if (index >= 0) {
+            System.out.println("Request found!");
+        } else {
+            System.out.println("Request not found.");
+        }
+    }
+
 
     public ArrayList<Show> getShows() {
         return shows;
