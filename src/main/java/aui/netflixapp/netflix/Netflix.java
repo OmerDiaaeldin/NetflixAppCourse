@@ -21,6 +21,7 @@ public class Netflix {
     protected ArrayList<Account> customers;
     protected ArrayList<Request> requests;
     //smurfing comment
+    //sm comment
 
     public Netflix(ArrayList<Show> shows, ArrayList<Account> customers, ArrayList<Request> requests) {
         this.shows = shows;
