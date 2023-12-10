@@ -4,11 +4,13 @@
  */
 package aui.netflixapp.shows;
 
+import java.io.Serializable;
+
 /**
  *
  * @author odaio
  */
-public class MaturityLevel {
+public class MaturityLevel implements Serializable {
     protected int min_age;
     protected String description;
 

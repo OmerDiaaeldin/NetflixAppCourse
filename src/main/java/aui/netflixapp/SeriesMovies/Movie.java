@@ -7,8 +7,9 @@ import aui.netflixapp.shows.Show;
 import aui.netflixapp.subscriptionPlan.Quality;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.io.*;
 
-public class Movie extends Show {
+public class Movie extends Show implements Serializable {
     private int duration;
 
     public Movie(int duration, String title, GregorianCalendar release_date, Quality quality, ArrayList<Genres> genres, Languages language, ArrayList<String> names, int num_views, String synopsis, double average_rating, MaturityLevel level, int total_watch) {

@@ -4,11 +4,13 @@
  */
 package aui.netflixapp.subscriptionPlan;
 
+import java.io.Serializable;
+
 /**
  *
  * @author KDP only
  */
-public enum Quality {
+public enum Quality implements Serializable {
     SD,
     HD,
     FHD,
