@@ -60,13 +60,13 @@ public class Subscription {
         setCurrent_plan(new_plan);
     }
     
-    public void billing_by_monthly() {
-        
+    public void billing_by_month () {
+        System.out.println("Billed for the monthly cost of: " + this.current_plan.cost);
     }
     
     public void cancel(String cancel_reason, GregorianCalendar date) {
         setCancel_reason(cancel_reason);
-        setCanceled(date);
+        setCanceled(new GregorianCalendar());
     }
     
     
