@@ -135,31 +135,31 @@ public class Netflix {
     System.out.println("Added a new account.");
 }
 
-public void removeAccount(Account account) {
-    customers.remove(account);
+    public void removeAccount(Account account) {
+        customers.remove(account);
+    }
+
+    public void editAccount(String email, Account newAccount) {
+        ListIterator<Account> iter = customers.listIterator();
+        while (iter.hasNext()) {
+            Account account = iter.next();
+            if (account.getEmail().equals(email)) {
+                iter.set(newAccount);
+            }
+        }
 }
 
-public void editAccount(String username, Account newAccount) {
-    ListIterator<Account> iter = customers.listIterator();
-    while (iter.hasNext()) {
-        Account account = iter.next();
-        if (account.getUsername().equals(username)) {
-            iter.set(newAccount);
-        }
-    }
-}
+    public ArrayList<Account> search(String email) {
+        ListIterator<Account> iter = customers.listIterator();
+        ArrayList<Account> results = new ArrayList<>();
 
-public ArrayList<Account> search(double balance) {
-    ListIterator<Account> iter = customers.listIterator();
-    ArrayList<Account> results = new ArrayList<>();
-
-    while (iter.hasNext()) {
-        Account account = iter.next();
-        if (account.getBalance() >= balance) {
-            results.add(account);
+        while (iter.hasNext()) {
+            Account account = iter.next();
+            if (account.getEmail().eqbalance) {
+                results.add(account);
+            }
         }
-    }
-    return results;
+        return results;
 }
 
 public void sortcustomers() {
