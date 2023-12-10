@@ -46,6 +46,10 @@ public class Viewing {
         this.rating = rating;
     }
 
+    public void rate(int rating) {
+        setRating(rating);
+    }
+    
     @Override
     public String toString() {
         return "Viewing{" + "date=" + date + ", show=" + show + ", rating=" + rating + '}';

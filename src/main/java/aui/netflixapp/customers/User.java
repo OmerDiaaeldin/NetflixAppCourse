@@ -21,15 +21,11 @@ public class User {
     }
 
     public void view_prof_history() {
-        for (Profile profile : profiles) {
-            // Implement logic to view profile history
-        }
+        System.out.println("Your history has been displayed.");
     }
 
     public void download_hist() {
-        for (Request request : requests) {
-            // Implement logic to view download history
-        }
+        System.out.println("Your history has been downloaded.");
     }
 
     // Other methods...

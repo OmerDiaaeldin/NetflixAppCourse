@@ -68,7 +68,6 @@ public class NetflixApp {
 
         if (choice == 1) {
             myObj.nextLine();
-
             System.out.println("Please enter a valid Email Address:");
             String email = myObj.nextLine();
             System.out.println("Please enter a password:");
