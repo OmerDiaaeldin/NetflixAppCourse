@@ -1,39 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package aui.netflixapp.customers;
-
 
 import aui.netflixapp.payment.PaymentMethod;
 import aui.netflixapp.subscriptionPlan.Subscription;
 import aui.netflixapp.requests.Request;
-/**
- *
- * @author odaio
- */
+import java.util.ArrayList;
+
 public class User {
     protected String phone;
-    protected Profile[] profile;
-    protected Request[] requests;
-    protected PaymentMethod pay_method;
-    protected Subscription subcription;
+    protected ArrayList<Profile> profiles;
+    protected ArrayList<Request> requests;
+    protected PaymentMethod paymentMethod;
+    protected Subscription subscription;
 
-    public User(String phone, Profile[] profile, Request[] requests, PaymentMethod pay_method, Subscription subcription) {
+    public User(String phone, ArrayList<Profile> profiles, ArrayList<Request> requests, PaymentMethod paymentMethod, Subscription subscription) {
         this.phone = phone;
-        this.profile = profile;
+        this.profiles = profiles;
         this.requests = requests;
-        this.pay_method = pay_method;
-        this.subcription = subcription;
+        this.paymentMethod = paymentMethod;
+        this.subscription = subscription;
     }
-    
+
     public void view_prof_history() {
-        
+        for (Profile profile : profiles) {
+            // Implement logic to view profile history
+        }
     }
-    
+
     public void download_hist() {
-        
+        for (Request request : requests) {
+            // Implement logic to view download history
+        }
     }
+
+    // Other methods...
 
     public String getPhone() {
         return phone;
@@ -43,42 +42,46 @@ public class User {
         this.phone = phone;
     }
 
-    public Profile[] getProfile() {
-        return profile;
+    public ArrayList<Profile> getProfiles() {
+        return profiles;
     }
 
-    public void setProfile(Profile[] profile) {
-        this.profile = profile;
+    public void setProfiles(ArrayList<Profile> profiles) {
+        this.profiles = profiles;
     }
 
-    public Request[] getRequests() {
+    public ArrayList<Request> getRequests() {
         return requests;
     }
 
-    public void setRequests(Request[] requests) {
+    public void setRequests(ArrayList<Request> requests) {
         this.requests = requests;
     }
 
-    public PaymentMethod getPay_method() {
-        return pay_method;
+    public PaymentMethod getPaymentMethod() {
+        return paymentMethod;
     }
 
-    public void setPay_method(PaymentMethod pay_method) {
-        this.pay_method = pay_method;
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
-    public Subscription getSubcription() {
-        return subcription;
+    public Subscription getSubscription() {
+        return subscription;
     }
 
-    public void setSubcription(Subscription subcription) {
-        this.subcription = subcription;
+    public void setSubscription(Subscription subscription) {
+        this.subscription = subscription;
     }
 
     @Override
     public String toString() {
-        return "User{" + "phone=" + phone + ", profile=" + profile + ", requests=" + requests + ", pay_method=" + pay_method + ", subcription=" + subcription + '}';
+        return "User{" +
+                "phone='" + phone + '\'' +
+                ", profiles=" + profiles +
+                ", requests=" + requests +
+                ", paymentMethod=" + paymentMethod +
+                ", subscription=" + subscription +
+                '}';
     }
-    
-    
 }

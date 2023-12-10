@@ -1,11 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package NetflixApp;
-
-//test comment
-
 
 import aui.netflixapp.netflix.Netflix;
 import aui.netflixapp.shows.*;
@@ -15,6 +8,7 @@ import aui.netflixapp.customers.Account;
 import aui.netflixapp.requests.Request;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.GregorianCalendar;
 
@@ -29,14 +23,14 @@ public class NetflixApp {
 
         Netflix netflix = new Netflix(shows, customers, requests);
 
-                Movie inception = new Movie(
+        Movie inception = new Movie(
                 148, // duration in minutes
                 "Inception",
                 new GregorianCalendar(2010, 6, 16),
                 Quality.HD,
-                new Genres[]{Genres.ACTION, Genres.SCIENCE_FICTION},
+                new ArrayList<>(List.of(Genres.ACTION, Genres.SCIENCE_FICTION)),
                 Languages.ENGLISH,
-                new String[]{"Leonardo DiCaprio", "Joseph Gordon-Levitt"},
+                new ArrayList<>(List.of("Leonardo DiCaprio", "Joseph Gordon-Levitt")),
                 0,
                 "A thief enters the dreams of others to steal their secrets.",
                 8.8,
@@ -46,13 +40,13 @@ public class NetflixApp {
 
         Serie strangerThings = new Serie(
                 4, // seasons
-                new int[]{8, 9, 8, 9}, // episodes per season
+                new ArrayList<>(List.of(8, 9, 8, 9)), // episodes per season
                 "Stranger Things",
                 new GregorianCalendar(2016, 6, 15),
                 Quality.HD,
-                new Genres[]{Genres.DRAMA, Genres.FANTASY},
+                new ArrayList<>(List.of(Genres.DRAMA, Genres.FANTASY)),
                 Languages.ENGLISH,
-                new String[]{"Millie Bobby Brown", "Winona Ryder"},
+                new ArrayList<>(List.of("Millie Bobby Brown", "Winona Ryder")),
                 0,
                 "A group of kids in a small town uncover a series of supernatural mysteries.",
                 8.7,
@@ -62,14 +56,14 @@ public class NetflixApp {
 
         netflix.addShow(inception);
         netflix.addShow(strangerThings);
-        
+
         System.out.println("State of 'Breaking Bad' show:");
         System.out.println("Netflix Shows:");
         for (Show show : netflix.getShows()) {
             System.out.println(show.toString());
         }
 
-        System.out.println("You must have an account in order to access NetflixApp. Press 1 to sign up:");
+        System.out.println("You must have an account to access NetflixApp. Press 1 to sign up:");
         int choice = myObj.nextInt();
 
         if (choice == 1) {

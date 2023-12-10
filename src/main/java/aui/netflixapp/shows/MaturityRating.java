@@ -8,18 +8,21 @@ package aui.netflixapp.shows;
  *
  * @author odaio
  */
-public class MaturityRating {
-    protected String[] rating_reason;
+import java.util.ArrayList;
 
-    public MaturityRating(String[] rating_reason) {
+
+public class MaturityRating {
+    protected ArrayList<String> rating_reason;
+
+    public MaturityRating(ArrayList<String> rating_reason) {
         this.rating_reason = rating_reason;
     }
 
-    public String[] getRating_reason() {
+    public ArrayList<String> getRating_reason() {
         return rating_reason;
     }
 
-    public void setRating_reason(String[] rating_reason) {
+    public void setRating_reason(ArrayList<String> rating_reason) {
         this.rating_reason = rating_reason;
     }
 
