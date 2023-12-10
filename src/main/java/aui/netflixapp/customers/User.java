@@ -8,18 +8,19 @@ package aui.netflixapp.customers;
 import aui.netflixapp.payment.PaymentMethod;
 import aui.netflixapp.subscriptionPlan.Subscription;
 import aui.netflixapp.requests.Request;
+import java.util.ArrayList;
 /**
  *
  * @author odaio
  */
 public class User {
     protected String phone;
-    protected Profile[] profile;
-    protected Request[] requests;
+    protected ArrayList<Profile> profile;
+    protected ArrayList<Request> requests;
     protected PaymentMethod pay_method;
     protected Subscription subcription;
 
-    public User(String phone, Profile[] profile, Request[] requests, PaymentMethod pay_method, Subscription subcription) {
+    public User(String phone, ArrayList<Profile> profile, ArrayList<Request> requests, PaymentMethod pay_method, Subscription subcription) {
         this.phone = phone;
         this.profile = profile;
         this.requests = requests;
@@ -43,19 +44,19 @@ public class User {
         this.phone = phone;
     }
 
-    public Profile[] getProfile() {
+    public ArrayList<Profile> getProfile() {
         return profile;
     }
 
-    public void setProfile(Profile[] profile) {
+    public void setProfile(ArrayList<Profile> profile) {
         this.profile = profile;
     }
 
-    public Request[] getRequests() {
+    public ArrayList<Request> getRequests() {
         return requests;
     }
 
-    public void setRequests(Request[] requests) {
+    public void setRequests(ArrayList<Request> requests) {
         this.requests = requests;
     }
 

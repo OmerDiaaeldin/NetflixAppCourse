@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.GregorianCalendar;
 import aui.netflixapp.subscriptionPlan.Quality;
 
-public class Show {
+public class Show implements Comparable<Show> {
     protected String title;
     protected GregorianCalendar release_date;
     protected Quality quality;
@@ -125,6 +125,23 @@ public class Show {
 
     public void setTotal_watch(int total_watch) {
         this.total_watch = total_watch;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        return (obj != null
+                && obj instanceof Show
+                && ((Show) obj).getTitle().equals(this.getTitle()));
+    }
+
+    @Override
+    public int hashCode() {
+        return title.hashCode();
+    }
+    
+    @Override
+    public int compareTo(Show show) {
+        return (this.title.compareTo(show.title));
     }
 
     @Override
