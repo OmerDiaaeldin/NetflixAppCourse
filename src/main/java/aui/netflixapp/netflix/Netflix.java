@@ -21,8 +21,6 @@ public class Netflix implements Serializable {
     protected ArrayList<Show> shows;
     protected ArrayList<Account> customers;
     protected ArrayList<Request> requests;
-    //smurfing comment
-    //sm comment
 
     public Netflix(ArrayList<Show> shows, ArrayList<Account> customers, ArrayList<Request> requests) {
         this.shows = shows;
