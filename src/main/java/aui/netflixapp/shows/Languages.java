@@ -4,11 +4,13 @@
  */
 package aui.netflixapp.shows;
 
+import java.io.Serializable;
+
 /**
  *
  * @author odaio
  */
-public enum Languages {
+public enum Languages implements Serializable {
     ENGLISH, 
     SPANISH, 
     FRENCH, 

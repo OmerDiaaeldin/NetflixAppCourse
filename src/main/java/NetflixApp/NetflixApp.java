@@ -22,69 +22,46 @@ public class NetflixApp {
         ArrayList<Request> requests = new ArrayList<>();
 
         Netflix netflix = new Netflix(shows, customers, requests);
+        
+        netflix.loadMovies();
 
-        Movie inception = new Movie(
-                148, // duration in minutes
-                "Inception",
-                new GregorianCalendar(2010, 6, 16),
-                Quality.HD,
-                new ArrayList<>(List.of(Genres.ACTION, Genres.SCIENCE_FICTION)),
-                Languages.ENGLISH,
-                new ArrayList<>(List.of("Leonardo DiCaprio", "Joseph Gordon-Levitt")),
-                0,
-                "A thief enters the dreams of others to steal their secrets.",
-                8.8,
-                new MaturityLevel(13, "Mind-bending thriller with action and sci-fi elements."),
-                0
-        );
+        int userChoice;
+        do {
+            System.out.println("\n===== Netflix Menu =====");
+            System.out.println("1. Search");
+            System.out.println("2. Browse");
+            System.out.println("3. Add Show");
+            System.out.println("4. Leave");
+            System.out.println("=========================");
+            System.out.print("Enter your choice: ");
+            userChoice = myObj.nextInt();
+            myObj.nextLine(); // Consume the newline character
 
-        Serie strangerThings = new Serie(
-                4, // seasons
-                new ArrayList<>(List.of(8, 9, 8, 9)), // episodes per season
-                "Stranger Things",
-                new GregorianCalendar(2016, 6, 15),
-                Quality.HD,
-                new ArrayList<>(List.of(Genres.DRAMA, Genres.FANTASY)),
-                Languages.ENGLISH,
-                new ArrayList<>(List.of("Millie Bobby Brown", "Winona Ryder")),
-                0,
-                "A group of kids in a small town uncover a series of supernatural mysteries.",
-                8.7,
-                new MaturityLevel(14, "Mild violence, suspense, and supernatural elements."),
-                0
-        );
-
-        netflix.addShow(inception);
-        netflix.addShow(strangerThings);
-
-        System.out.println("State of 'Breaking Bad' show:");
-        System.out.println("Netflix Shows:");
-        for (Show show : netflix.getShows()) {
-            System.out.println(show.toString());
-        }
-
-        System.out.println("You must have an account to access NetflixApp. Press 1 to sign up:");
-        int choice = myObj.nextInt();
-
-        if (choice == 1) {
-            myObj.nextLine();
-            System.out.println("Please enter a valid Email Address:");
-            String email = myObj.nextLine();
-            System.out.println("Please enter a password:");
-            String password = myObj.nextLine();
-
-            netflix.register(email, password);
-            System.out.println("State of the user account:");
-            System.out.println(customers.get(0).toString()); // Assuming only one user account for simplicity
-
-            System.out.println("Enter the name of the show:");
-            String searchQuery = myObj.nextLine();
-            netflix.search(searchQuery);
-
-            System.out.println("Browsing Netflix shows:");
-            netflix.browse();
-        } else {
-            System.out.println("You must sign up to access NetflixApp. Goodbye!");
-        }
+            switch (userChoice) {
+                case 1:
+                    System.out.println("Enter the name of the show to search:");
+                    String searchQuery = myObj.nextLine();
+                    netflix.search(searchQuery);
+                    break;
+                case 2:
+                    System.out.println("Browsing Netflix shows:");
+                    netflix.browse();
+                    break;
+                case 3:
+                    System.out.println("Enter the title of the show:");
+                    String title = myObj.nextLine();
+                    Show newShow = new Show(title);
+                    netflix.addShow(newShow);
+                    // Serialization of list of showe
+                    netflix.saveMovies();
+                    break;
+                case 4:
+                    netflix.saveMovies();
+                    System.out.println("Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        } while (userChoice != 4);
     }
 }

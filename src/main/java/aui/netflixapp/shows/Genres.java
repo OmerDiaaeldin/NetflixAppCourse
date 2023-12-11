@@ -4,11 +4,13 @@
  */
 package aui.netflixapp.shows;
 
+import java.io.Serializable;
+
 /**
  *
  * @author odaio
  */
-public enum Genres {
+public enum Genres implements Serializable {
     ACTION,
     ADVENTURE,
     COMEDY,

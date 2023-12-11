@@ -7,8 +7,9 @@ import aui.netflixapp.shows.Show;
 import aui.netflixapp.subscriptionPlan.Quality;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.io.*;
 
-public class Serie extends Show {
+public class Serie extends Show implements Serializable {
     private int seasons;
     private ArrayList<Integer> episodes;
 

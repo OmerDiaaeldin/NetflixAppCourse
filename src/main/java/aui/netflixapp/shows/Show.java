@@ -11,8 +11,9 @@ package aui.netflixapp.shows;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import aui.netflixapp.subscriptionPlan.Quality;
+import java.io.*;
 
-public class Show implements Comparable<Show> {
+public class Show implements Comparable<Show>, Serializable {
     protected String title;
     protected GregorianCalendar release_date;
     protected Quality quality;
@@ -37,6 +38,9 @@ public class Show implements Comparable<Show> {
         this.average_rating = average_rating;
         this.level = level;
         this.total_watch = total_watch;
+    }
+    public Show(String title) {
+        this.title=title;
     }
 
     public String getTitle() {

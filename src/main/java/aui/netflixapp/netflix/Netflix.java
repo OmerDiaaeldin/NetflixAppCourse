@@ -12,11 +12,12 @@ import aui.netflixapp.requests.Request;
 import java.util.ListIterator;
 import java.util.Collections;
 import java.util.Comparator;
+import java.io.*;
 /**
  *
  * @author odaio
  */
-public class Netflix {
+public class Netflix implements Serializable {
     protected ArrayList<Show> shows;
     protected ArrayList<Account> customers;
     protected ArrayList<Request> requests;
@@ -250,6 +251,23 @@ public void findAccount(Account account, Comparator<Account> comp) {
         }
     }
 
+    public void saveMovies() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("data/netflixy.ser"))) {
+            oos.writeObject(shows);
+            System.out.println("Movies saved successfully.");
+        } catch (IOException e) {
+            System.err.println("Error saving movies: " + e.getMessage());
+        }
+    }
+    
+    public void loadMovies() {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("data/netflixy.ser"))) {
+            shows = (ArrayList<Show>) ois.readObject();
+            System.out.println("Movies loaded successfully.");
+        } catch (IOException | ClassNotFoundException e) {
+            System.err.println("Error loading movies: " + e.getMessage());
+        }
+    }
 
     public ArrayList<Show> getShows() {
         return shows;
