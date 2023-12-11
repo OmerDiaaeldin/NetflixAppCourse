@@ -37,6 +37,7 @@ public class NetflixApp {
             userChoice = myObj.nextInt();
             myObj.nextLine(); // Consume the newline character
 
+            //add custom exception
             switch (userChoice) {
                 case 1:
                     System.out.println("Enter the name of the show to search:");
