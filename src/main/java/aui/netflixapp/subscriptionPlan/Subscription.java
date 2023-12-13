@@ -61,7 +61,7 @@ public class Subscription {
     }
     
     public void billing_by_month () {
-        System.out.println("Billed for the monthly cost of: " + this.current_plan.cost);
+        System.out.println("Billed for the monthly cost of: " + this.current_plan.getCost());
     }
     
     public void cancel(String cancel_reason, GregorianCalendar date) {

@@ -15,7 +15,7 @@ import java.util.ListIterator;
  * @author odaio
  */
 public class CustomersCollections {
-    protected ArrayList<Account> customers;
+    private ArrayList<Account> customers;
     
     public CustomersCollections(ArrayList<Account> customers){
         this.customers = customers;
