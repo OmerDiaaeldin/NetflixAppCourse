@@ -6,15 +6,15 @@ import aui.netflixapp.shows.Show;
 import java.util.ArrayList;
 
 public class Profile {
-    protected String name;
-    protected MaturityLevel level_restriction;
-    protected String email;
-    protected boolean toNotify;
-    protected Languages language;
-    protected boolean subtitles;
-    protected ArrayList<Show> favorites;
-    protected ArrayList<Show> blocked;
-    protected Languages subtitle_lang;
+    private String name;
+    private MaturityLevel level_restriction;
+    private String email;
+    private boolean toNotify;
+    private Languages language;
+    private boolean subtitles;
+    private ArrayList<Show> favorites;
+    private ArrayList<Show> blocked;
+    private Languages subtitle_lang;
 
     public Profile(String name, MaturityLevel level_restriction, String email, boolean toNotify, Languages language, boolean subtitles, ArrayList<Show> favorites, ArrayList<Show> blocked, Languages subtitle_lang) {
         this.name = name;

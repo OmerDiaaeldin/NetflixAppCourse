@@ -19,15 +19,39 @@ import java.io.*;
  */
 
 public class Netflix{
-    public ShowCollections shows;
-    public CustomersCollections customers;
-    public RequestCollections requests;
+    private ShowCollections shows;
+    private CustomersCollections customers;
+    private RequestCollections requests;
 
     public Netflix(ArrayList<Show> shows, ArrayList<Account> customers, ArrayList<Request> requests) {
         this.shows = new ShowCollections(shows);
         this.customers = new CustomersCollections(customers);
         this.requests = new RequestCollections(requests);
-    }    
+    }
+
+    public ShowCollections getShows() {
+        return shows;
+    }
+
+    public void setShows(ShowCollections shows) {
+        this.shows = shows;
+    }
+
+    public CustomersCollections getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(CustomersCollections customers) {
+        this.customers = customers;
+    }
+
+    public RequestCollections getRequests() {
+        return requests;
+    }
+
+    public void setRequests(RequestCollections requests) {
+        this.requests = requests;
+    }
     
     @Override
     public String toString() {

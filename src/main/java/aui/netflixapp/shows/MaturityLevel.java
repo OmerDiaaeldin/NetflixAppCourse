@@ -11,8 +11,8 @@ import java.io.Serializable;
  * @author odaio
  */
 public class MaturityLevel implements Serializable {
-    protected int min_age;
-    protected String description;
+    private int min_age;
+    private String description;
 
     public MaturityLevel(int min_age, String description) {
         this.min_age = min_age;
