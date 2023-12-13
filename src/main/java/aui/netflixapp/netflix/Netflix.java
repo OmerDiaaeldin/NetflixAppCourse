@@ -18,7 +18,7 @@ import java.io.*;
  * @author odaio
  */
 public class Netflix implements Serializable {
-    2;
+    protected ArrayList<Show> shows;
     protected ArrayList<Account> customers;
     protected ArrayList<Request> requests;
 

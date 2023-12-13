@@ -2,15 +2,11 @@ package NetflixApp;
 
 import aui.netflixapp.netflix.Netflix;
 import aui.netflixapp.shows.*;
-import aui.netflixapp.SeriesMovies.*;
-import aui.netflixapp.subscriptionPlan.Quality;
 import aui.netflixapp.customers.Account;
 import aui.netflixapp.requests.Request;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-import java.util.GregorianCalendar;
 
 public class NetflixApp {
 
