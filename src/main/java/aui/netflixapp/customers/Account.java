@@ -12,8 +12,8 @@ public class Account implements Comparable<Account> {
     //implement methods
     //verify whether getters and setters should be used
     
-    protected String email;
-    protected String password;
+    private String email;
+    private String password;
     
     public Account(String email, String password){
         this.email = email;

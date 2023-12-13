@@ -14,17 +14,17 @@ import aui.netflixapp.subscriptionPlan.Quality;
 import java.io.*;
 
 public class Show implements Comparable<Show>, Serializable {
-    protected String title;
-    protected GregorianCalendar release_date;
-    protected Quality quality;
-    protected ArrayList<Genres> genres;
-    protected Languages language;
-    protected ArrayList<String> names;
-    protected int num_views;
-    protected String synopsis;
-    protected double average_rating;
-    protected MaturityLevel level;
-    protected int total_watch;
+    private String title;
+    private GregorianCalendar release_date;
+    private Quality quality;
+    private ArrayList<Genres> genres;
+    private Languages language;
+    private ArrayList<String> names;
+    private int num_views;
+    private String synopsis;
+    private double average_rating;
+    private MaturityLevel level;
+    private int total_watch;
 
     public Show(String title, GregorianCalendar release_date, Quality quality, ArrayList<Genres> genres, Languages language, ArrayList<String> names, int num_views, String synopsis, double average_rating, MaturityLevel level, int total_watch) {
         this.title = title;

@@ -10,10 +10,10 @@ package aui.netflixapp.subscriptionPlan;
  */
 
 public class Plan {
-    protected double cost;
-    protected int screen_num;
-    protected int downloaded_devices;
-    protected Quality quality;
+    private double cost;
+    private int screen_num;
+    private int downloaded_devices;
+    private Quality quality;
 
     public Plan(double cost, int screen_num, int downloaded_devices, Quality quality) {
         this.cost = cost;

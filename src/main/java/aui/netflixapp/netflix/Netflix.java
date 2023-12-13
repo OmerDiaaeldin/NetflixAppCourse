@@ -18,9 +18,9 @@ import java.io.*;
  * @author odaio
  */
 public class Netflix {
-    protected ArrayList<Show> shows;
-    protected ArrayList<Account> customers;
-    protected ArrayList<Request> requests;
+    private ArrayList<Show> shows;
+    private ArrayList<Account> customers;
+    private ArrayList<Request> requests;
 
     public Netflix(ArrayList<Show> shows, ArrayList<Account> customers, ArrayList<Request> requests) {
         this.shows = shows;

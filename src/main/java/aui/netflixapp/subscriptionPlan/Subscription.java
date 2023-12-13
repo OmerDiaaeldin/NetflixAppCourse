@@ -12,10 +12,10 @@ package aui.netflixapp.subscriptionPlan;
 import java.util.GregorianCalendar;
 
 public class Subscription {
-    protected GregorianCalendar subscribed;    
-    protected Plan current_plan;
-    protected GregorianCalendar canceled;
-    protected String cancel_reason;
+    private GregorianCalendar subscribed;    
+    private Plan current_plan;
+    private GregorianCalendar canceled;
+    private String cancel_reason;
 
     public Subscription(GregorianCalendar subscribed, Plan current_plan, GregorianCalendar canceled, String cancel_reason) {
         this.subscribed = subscribed;
