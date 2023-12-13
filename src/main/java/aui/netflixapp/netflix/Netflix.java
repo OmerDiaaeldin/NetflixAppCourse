@@ -17,7 +17,7 @@ import java.io.*;
  *
  * @author odaio
  */
-public class Netflix implements Serializable {
+public class Netflix {
     protected ArrayList<Show> shows;
     protected ArrayList<Account> customers;
     protected ArrayList<Request> requests;
@@ -251,6 +251,8 @@ public void findAccount(Account account, Comparator<Account> comp) {
         }
     }
 
+    
+    //this method saves the list of shows to netflixy.ser file.
     public void saveMovies() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("data/netflixy.ser"))) {
             oos.writeObject(shows);
@@ -260,6 +262,8 @@ public void findAccount(Account account, Comparator<Account> comp) {
         }
     }
     
+    
+    //this method reads the file that contains serialization for the list of shows and saves it to an array list.
     public void loadMovies() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("data/netflixy.ser"))) {
             shows = (ArrayList<Show>) ois.readObject();
