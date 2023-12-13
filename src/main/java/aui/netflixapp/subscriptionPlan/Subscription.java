@@ -10,12 +10,14 @@ package aui.netflixapp.subscriptionPlan;
  */
 
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 
 public class Subscription {
     private GregorianCalendar subscribed;    
     private Plan current_plan;
     private GregorianCalendar canceled;
     private String cancel_reason;
+    private HashMap<Integer, Boolean> billing_by_month = new HashMap<Integer, Boolean>();
 
     public Subscription(GregorianCalendar subscribed, Plan current_plan, GregorianCalendar canceled, String cancel_reason) {
         this.subscribed = subscribed;
@@ -55,12 +57,21 @@ public class Subscription {
     public void setCancel_reason(String cancel_reason) {
         this.cancel_reason = cancel_reason;
     }
-            
+
+    public HashMap<Integer, Boolean> getBilling_by_month() {
+        return billing_by_month;
+    }
+
+    public void setBilling_by_month(HashMap<Integer, Boolean> billing_by_month) {
+        this.billing_by_month = billing_by_month;
+    }
+                
     public void change_plan(Plan new_plan) {
         setCurrent_plan(new_plan);
     }
     
-    public void billing_by_month () {
+    public void billing_by_month (Integer month, Boolean isPaid) {
+        this.billing_by_month.put(month, isPaid);
         System.out.println("Billed for the monthly cost of: " + this.current_plan.getCost());
     }
     
