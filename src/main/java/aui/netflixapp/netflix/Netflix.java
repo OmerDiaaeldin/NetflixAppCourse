@@ -17,7 +17,8 @@ import java.io.*;
  *
  * @author odaio
  */
-public class Netflix implements Serializable {
+
+public class Netflix{
     public ShowCollections shows;
     public CustomersCollections customers;
     public RequestCollections requests;
@@ -27,7 +28,7 @@ public class Netflix implements Serializable {
         this.customers = new CustomersCollections(customers);
         this.requests = new RequestCollections(requests);
     }    
-
+    
     @Override
     public String toString() {
         return "Netflix{" + "shows=" + shows + ", customers=" + customers + ", requests=" + requests + '}';
