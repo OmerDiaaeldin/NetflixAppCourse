@@ -12,9 +12,9 @@ import java.util.GregorianCalendar;
  */
 public class Request implements Comparable<Request> {
 
-    protected Account account1;
-    protected GregorianCalendar date;
-    protected String titleSuggestion;
+    private Account account1;
+    private GregorianCalendar date;
+    private String titleSuggestion;
 
     public Request(Account account1, GregorianCalendar date, String titleSuggestion) {
         this.account1 = account1;

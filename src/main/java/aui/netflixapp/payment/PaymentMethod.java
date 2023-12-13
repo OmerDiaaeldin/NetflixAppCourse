@@ -11,10 +11,10 @@ import java.util.GregorianCalendar;
  * @author odaio
  */
 public class PaymentMethod {
-    protected String holder_name;
-    protected GregorianCalendar expiration;
-    protected PaymentType type;
-    protected int number;
+    private String holder_name;
+    private GregorianCalendar expiration;
+    private PaymentType type;
+    private int number;
 
     public PaymentMethod(String holder_name, GregorianCalendar expiration, PaymentType type, int number) {
         this.holder_name = holder_name;

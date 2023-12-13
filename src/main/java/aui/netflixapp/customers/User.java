@@ -6,11 +6,11 @@ import aui.netflixapp.requests.Request;
 import java.util.ArrayList;
 
 public class User {
-    protected String phone;
-    protected ArrayList<Profile> profiles;
-    protected ArrayList<Request> requests;
-    protected PaymentMethod paymentMethod;
-    protected Subscription subscription;
+    private String phone;
+    private ArrayList<Profile> profiles;
+    private ArrayList<Request> requests;
+    private PaymentMethod paymentMethod;
+    private Subscription subscription;
 
     public User(String phone, ArrayList<Profile> profiles, ArrayList<Request> requests, PaymentMethod paymentMethod, Subscription subscription) {
         this.phone = phone;

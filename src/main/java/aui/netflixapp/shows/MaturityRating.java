@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 
 public class MaturityRating {
-    protected ArrayList<String> rating_reason;
+    private ArrayList<String> rating_reason;
 
     public MaturityRating(ArrayList<String> rating_reason) {
         this.rating_reason = rating_reason;

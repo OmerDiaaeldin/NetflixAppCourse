@@ -12,9 +12,9 @@ import java.util.GregorianCalendar;
  */
 public class Viewing {
 
-    protected GregorianCalendar date;
-    protected Show show;
-    protected int rating;
+    private GregorianCalendar date;
+    private Show show;
+    private int rating;
 
     public Viewing(GregorianCalendar date, Show show, int rating) {
         this.date = date;

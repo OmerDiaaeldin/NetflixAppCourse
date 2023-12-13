@@ -19,7 +19,7 @@ public class NetflixApp {
 
         Netflix netflix = new Netflix(shows, customers, requests);
         
-        netflix.shows.loadMovies();
+        netflix.getShows().loadMovies();
 
         int userChoice;
         do {
@@ -38,22 +38,22 @@ public class NetflixApp {
                 case 1:
                     System.out.println("Enter the name of the show to search:");
                     String searchQuery = myObj.nextLine();
-                    netflix.shows.search(searchQuery);
+                    netflix.getShows().search(searchQuery);
                     break;
                 case 2:
                     System.out.println("Browsing Netflix shows:");
-                    netflix.shows.browse();
+                    netflix.getShows().browse();
                     break;
                 case 3:
                     System.out.println("Enter the title of the show:");
                     String title = myObj.nextLine();
                     Show newShow = new Show(title);
-                    netflix.shows.addShow(newShow);
+                    netflix.getShows().addShow(newShow);
                     // Serialization of list of showe
-                    netflix.shows.saveMovies();
+                    netflix.getShows().saveMovies();
                     break;
                 case 4:
-                    netflix.shows.saveMovies();
+                    netflix.getShows().saveMovies();
                     System.out.println("Goodbye!");
                     break;
                 default:
