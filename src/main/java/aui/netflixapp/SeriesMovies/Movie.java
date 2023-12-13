@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.io.*;
 
+
+//implemented serializable in Movie class
 public class Movie extends Show implements Serializable {
     private int duration;
 
