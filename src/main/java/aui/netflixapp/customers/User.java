@@ -34,17 +34,8 @@ public class User {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        try{
-            if(phone.length() != 10){
-                throw new PhoneNumberInvalidException("the phone number is invalid. it should be exactly 10 numbers");
-            }else{
-                this.phone = phone;
-            }
-        }
-        catch(PhoneNumberInvalidException ex){
-            System.out.println(ex.getMessage());
-         }
+    public void setPhone(String phone){
+        this.phone = phone;
     }
 
     public ArrayList<Profile> getProfiles() {
