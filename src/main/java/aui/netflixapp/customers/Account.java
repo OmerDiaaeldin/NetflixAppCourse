@@ -15,9 +15,13 @@ public class Account implements Comparable<Account> {
     private String email;
     private String password;
     
-    public Account(String email, String password){
+    public Account(String email, String password) throws PasswordTooShortException{
         this.email = email;
-        this.password = password;
+        if(password.length()<10){
+            throw new PasswordTooShortException("Needs to be longer than 10 characters");
+        }else{
+            this.password = password;
+        }
     }
 
     public String getEmail() {

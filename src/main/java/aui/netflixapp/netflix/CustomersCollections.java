@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.ListIterator;
+import aui.netflixapp.customers.PasswordTooShortException;
 
 /**
  *
@@ -30,7 +31,11 @@ public class CustomersCollections {
     }
     
     public void register(String email, String password) {
-        customers.add(new Account(email, password)); 
+        try{
+        customers.add(new Account(email, password));
+        }catch(PasswordTooShortException e){
+            System.out.println(e.getMessage());
+        }
     }
     
     public void addAccount(Account account) {

@@ -8,9 +8,9 @@ package aui.netflixapp.customers;
  *
  * @author odaio
  */
-public class PhoneNumberInvalidException extends Exception {
+public class PasswordTooShortException extends Exception {
 
-    public PhoneNumberInvalidException(String message) {
+    public PasswordTooShortException(String message) {
         super(message);
     }
     
